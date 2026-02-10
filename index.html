@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Digital Dropshipping Masterclass</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#F15A24", // Vibrant Orange from reference
+                        "background-light": "#FFFFFF",
+                        "background-dark": "#0F172A",
+                        "peach-light": "#FFF5F0",
+                        "peach-dark": "#1E293B",
+                    },
+                    fontFamily: {
+                        display: ["Plus Jakarta Sans", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "1rem",
+                    },
+                },
+            },
+        };
+    </script>
+<style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .dark .glass-card {
+            background: rgba(30, 41, 59, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+<script>
+  function goToRazorpay() {
+    var options = {
+      key: "rzp_test_XXXXXXXXXX", // 🔴 REPLACE with your Razorpay Key ID
+      amount: 499900, // amount in paise (₹4999)
+      currency: "INR",
+      name: "DropMaster Masterclass",
+      description: "Digital Dropshipping Course",
+      image: "https://your-logo-url.png", // optional
+      handler: function (response) {
+        alert("Payment Successful!\nPayment ID: " + response.razorpay_payment_id);
+        // OPTIONAL: redirect after success
+        // window.location.href = "/success.html";
+      },
+      prefill: {
+        name: "",
+        email: "",
+        contact: ""
+      },
+      theme: {
+        color: "#F15A24"
+      }
+    };
+
+    var rzp = new Razorpay(options);
+    rzp.open();
+  }
+</script>
+
+<body class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-100 selection:bg-primary/30">
+<header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-slate-100 dark:border-slate-800">
+<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-10 h-10 bg-primary rounded-xl flex items-center justify-center text-white">
+<span class="material-icons-round">bolt</span>
+</div>
+<span class="text-xl font-extrabold tracking-tight">DropMaster</span>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Home</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#curriculum">Curriculum</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#testimonials">Testimonials</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#faq">FAQ</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full transition-colors" onclick="document.documentElement.classList.toggle('dark')">
+<span class="material-icons-round text-slate-500">dark_mode</span>
+</button>
+<a class="bg-primary hover:bg-orange-600 text-white px-6 py-2.5 rounded-full font-bold text-sm transition-all transform hover:scale-105 shadow-lg shadow-primary/20" href="#">
+                    Sign Up
+                </a>
+</div>
+</div>
+</header>
+<main class="pt-20">
+<section class="relative overflow-hidden py-20 lg:py-32">
+<div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
+<div class="z-10">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-100 dark:bg-orange-900/30 text-primary text-xs font-bold uppercase tracking-wider mb-6">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+                        Join 2,000+ Students
+                    </div>
+<h1 class="text-5xl lg:text-7xl font-extrabold leading-tight mb-6">
+                        Master the Art of <span class="text-primary">Digital Dropshipping</span>
+</h1>
+<p class="text-lg text-slate-600 dark:text-slate-400 mb-10 leading-relaxed max-w-xl">
+                        Build a highly profitable, scalable online business by selling digital products with zero inventory and infinite margins. 
+                    </p>
+<div class="flex flex-wrap gap-4">
+<button onclick="goToRazorpay()" class="bg-primary hover:bg-orange-600 text-white px-8 py-4 rounded-2xl font-bold text-lg transition-all shadow-xl shadow-primary/25">
+                            Enroll Now
+                        </button>
+<button class="flex items-center gap-2 text-slate-600 dark:text-slate-300 font-bold hover:text-primary px-8 py-4 transition-colors">
+<span class="material-icons-round border-2 border-slate-200 dark:border-slate-700 rounded-full p-1">play_arrow</span>
+                            Watch Preview
+                        </button>
+</div>
+</div>
+<div class="relative">
+<div class="absolute -top-20 -right-20 w-96 h-96 bg-primary/10 blur-[100px] rounded-full"></div>
+<div class="absolute -bottom-20 -left-20 w-72 h-72 bg-orange-400/10 blur-[80px] rounded-full"></div>
+<img alt="Student learning digital dropshipping" class="rounded-3xl shadow-2xl relative z-10 transform lg:rotate-2 hover:rotate-0 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJ7ZPVNaLwUNUka5un1fY52YgYzAQMohsyX0nc6AdxBG1ncYVMFZ5v-zp2nCoDzYqAO9OCNJu32ABhS0RLBK4w1sFRGZ2fME0nLKXNvhxNtg_EJEbqG-YlTujh4DogrybdEPxagKjueyFKCjtjRlKU_YzktqsHM8zn8THou1N0gyQRDSVTRNODsHvrFFYww4gY4oDprhJ0MNfsUXroZ6PpfExVbMvFiwQEZUedPYtXDLAkWs86n7EKG0RULOMlk0Zn7V6EwkYrKPY"/>
+<div class="absolute -bottom-10 -right-6 lg:-right-10 glass-card p-6 rounded-2xl shadow-xl z-20 flex items-center gap-4 animate-bounce hover:pause">
+<div class="bg-green-500 text-white p-3 rounded-full">
+<span class="material-icons-round">trending_up</span>
+</div>
+<div>
+<p class="text-xs text-slate-500 dark:text-slate-400 font-medium uppercase">Daily Revenue</p>
+<p class="text-xl font-bold">$1,240.00</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-slate-50 dark:bg-slate-900/50" id="curriculum">
+<div class="max-w-7xl mx-auto px-6">
+<div class="text-center max-w-2xl mx-auto mb-16">
+<h2 class="text-primary font-bold uppercase tracking-widest text-sm mb-4">Course Modules</h2>
+<h3 class="text-4xl font-extrabold mb-6">The Road to Financial Freedom</h3>
+<p class="text-slate-600 dark:text-slate-400">Everything you need to go from zero to a six-figure digital shop, condensed into simple, actionable steps.</p>
+</div>
+<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+<div class="bg-white dark:bg-slate-800 p-8 rounded-3xl shadow-sm border border-slate-100 dark:border-slate-700 hover:shadow-xl transition-shadow group">
+<div class="w-16 h-16 bg-blue-100 dark:bg-blue-900/30 text-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span class="material-icons-round text-3xl">search</span>
+</div>
+<h4 class="text-xl font-bold mb-4">Product Research</h4>
+<p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">Learn how to identify winning digital products that are in high demand right now.</p>
+</div>
+<div class="bg-white dark:bg-slate-800 p-8 rounded-3xl shadow-sm border border-slate-100 dark:border-slate-700 hover:shadow-xl transition-shadow group">
+<div class="w-16 h-16 bg-green-100 dark:bg-green-900/30 text-green-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span class="material-icons-round text-3xl">storefront</span>
+</div>
+<h4 class="text-xl font-bold mb-4">Store Building</h4>
+<p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">Step-by-step setup of high-converting storefronts that turn visitors into loyal customers.</p>
+</div>
+<div class="bg-white dark:bg-slate-800 p-8 rounded-3xl shadow-sm border border-slate-100 dark:border-slate-700 hover:shadow-xl transition-shadow group">
+<div class="w-16 h-16 bg-purple-100 dark:bg-purple-900/30 text-purple-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span class="material-icons-round text-3xl">campaign</span>
+</div>
+<h4 class="text-xl font-bold mb-4">Ad Strategies</h4>
+<p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">Master Facebook, TikTok, and Google ads to drive targeted traffic without wasting money.</p>
+</div>
+<div class="bg-white dark:bg-slate-800 p-8 rounded-3xl shadow-sm border border-slate-100 dark:border-slate-700 hover:shadow-xl transition-shadow group">
+<div class="w-16 h-16 bg-orange-100 dark:bg-orange-900/30 text-orange-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span class="material-icons-round text-3xl">rocket_launch</span>
+</div>
+<h4 class="text-xl font-bold mb-4">Scaling</h4>
+<p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">Optimize your operations and scale your revenue to $10k/month and beyond with automation.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-peach-light dark:bg-peach-dark">
+<div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+<div class="order-2 lg:order-1 relative">
+<img alt="Person working on strategy" class="rounded-[2.5rem] shadow-2xl relative z-10" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9UZcvspfvPtGoApRcNf8xilxbz4g_Al6bNEqDAykCDXBbQxBlu5BtUBYR9hJlvmZpppHbip7V1SSYg10VSvBipdfPPHT9oaj7P0ScxSgsVTSIaUSCPbe7h6jf8bHG9ZxM3vmQ0ytTZ8GFxFTxCwZxEOQnkOYNHNhcbL7JPW3b_KfkDxL46twtZyPrMQpQ7w5NU5nts4FixI9XeOYJ32n-puOXl7fLLm_tM6L26yZk3kOLN0NQH4en6Zo9Bc4rJAYUD2aOKpbmYeY"/>
+<div class="absolute -top-10 -left-10 w-40 h-40 bg-primary/20 rounded-full blur-3xl"></div>
+</div>
+<div class="order-1 lg:order-2">
+<h2 class="text-primary font-bold uppercase tracking-widest text-sm mb-4">How it works</h2>
+<h3 class="text-4xl font-extrabold mb-8 leading-tight">Simple 4-Step Success!</h3>
+<p class="text-slate-600 dark:text-slate-400 mb-8">We understand that no two businesses are alike. That's why our framework is designed to be adaptable yet systematic.</p>
+<div class="space-y-6">
+<div class="flex gap-5">
+<div class="w-10 h-10 shrink-0 bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg">1</div>
+<div>
+<h5 class="font-bold text-lg mb-1">Join Course</h5>
+<p class="text-slate-500 dark:text-slate-400 text-sm">Get instant access to our masterclass and private community.</p>
+</div>
+</div>
+<div class="flex gap-5">
+<div class="w-10 h-10 shrink-0 bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg">2</div>
+<div>
+<h5 class="font-bold text-lg mb-1">Build Store</h5>
+<p class="text-slate-500 dark:text-slate-400 text-sm">Follow the templates to launch your store in under 48 hours.</p>
+</div>
+</div>
+<div class="flex gap-5">
+<div class="w-10 h-10 shrink-0 bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg">3</div>
+<div>
+<h5 class="font-bold text-lg mb-1">Launch Ads</h5>
+<p class="text-slate-500 dark:text-slate-400 text-sm">Apply our high-ROI ad frameworks to start driving sales.</p>
+</div>
+</div>
+<div class="flex gap-5">
+<div class="w-10 h-10 shrink-0 bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg">4</div>
+<div>
+<h5 class="font-bold text-lg mb-1">Scale Profit</h5>
+<p class="text-slate-500 dark:text-slate-400 text-sm">Rinse and repeat for new products to build your empire.</p>
+</div>
+</div>
+</div>
+<div class="mt-10 flex gap-4">
+<button onclick="goToRazorpay()"  class="bg-primary hover:bg-orange-600 text-white px-8 py-3 rounded-xl font-bold transition-all shadow-lg">Get Started</button>
+<button class="border-2 border-primary text-primary hover:bg-primary/5 px-8 py-3 rounded-xl font-bold transition-all">Read More</button>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24">
+<div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-20 items-center">
+<div>
+<h2 class="text-primary font-bold uppercase tracking-widest text-sm mb-4">Our Strategy</h2>
+<h3 class="text-4xl font-extrabold mb-8">Data-Driven Results</h3>
+<p class="text-slate-600 dark:text-slate-400 leading-relaxed mb-6">
+                        We believe in the power of data. Our analytics-driven approach allows us to make informed decisions and optimize your marketing efforts for maximum ROI.
+                    </p>
+<p class="text-slate-600 dark:text-slate-400 leading-relaxed mb-8">
+                        Let's turn your data into actionable insights. Our tailored solutions for business growth are designed to handle the heavy lifting while you focus on vision.
+                    </p>
+<button class="bg-primary hover:bg-orange-600 text-white px-8 py-3 rounded-xl font-bold transition-all shadow-lg">Learn More</button>
+</div>
+<div class="relative bg-slate-50 dark:bg-slate-900 rounded-[2.5rem] p-12 overflow-hidden border border-slate-100 dark:border-slate-800">
+<div class="absolute top-0 right-0 p-8">
+<span class="material-icons-round text-8xl text-primary/5">bar_chart</span>
+</div>
+<img alt="Data visualization dashboard" class="rounded-2xl shadow-xl relative z-10" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQId78FgcVBrHW7KTbOCHgf0CJvAiWeBeOI5KmTVHLatTRvKzRHWqDqey1sdTO0eiv45dgT_i5ixkk1PyfDS_57t-NtKIT_4RdsQ8_JnjK5yNjp0d7myUj5OeGB1rR5lBSoCWBDQ6LIxYvSry8aHa5WudQgq2gu-X5Az9UkV8h5LCvbXcmA4CKqZlWGhIb54gsiw7xMF6qfflu_6NwqtIxO5rRoHfgHxZnJGzt0v4h7kqu5a4TJMgx7UvTGRes3CMDI5HEB9GH2AY"/>
+<div class="mt-8 flex gap-4 overflow-x-auto pb-4">
+<div class="bg-white dark:bg-slate-800 p-4 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700 min-w-[140px]">
+<p class="text-xs text-slate-500 mb-1">Success Rate</p>
+<p class="text-xl font-extrabold text-primary">92%</p>
+</div>
+<div class="bg-white dark:bg-slate-800 p-4 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700 min-w-[140px]">
+<p class="text-xs text-slate-500 mb-1">Students</p>
+<p class="text-xl font-extrabold text-primary">2,500+</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-slate-50 dark:bg-slate-900/50" id="testimonials">
+<div class="max-w-7xl mx-auto px-6">
+<div class="text-center max-w-2xl mx-auto mb-16">
+<h2 class="text-primary font-bold uppercase tracking-widest text-sm mb-4">Testimonials</h2>
+<h3 class="text-4xl font-extrabold mb-6">What Our Students Say!</h3>
+<p class="text-slate-600 dark:text-slate-400">Join hundreds of successful entrepreneurs who started where you are today.</p>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<div class="bg-white dark:bg-slate-800 p-8 rounded-[2rem] shadow-sm border border-slate-100 dark:border-slate-700">
+<div class="flex gap-1 text-orange-400 mb-6">
+<span class="material-icons-round text-sm">star</span>
+<span class="material-icons-round text-sm">star</span>
+<span class="material-icons-round text-sm">star</span>
+<span class="material-icons-round text-sm">star</span>
+<span class="material-icons-round text-sm">star</span>
+</div>
+<p class="italic text-slate-600 dark:text-slate-300 mb-8 leading-relaxed">
+                            "This course changed my life. I went from working a dead-end 9-5 to making $5k a month selling planners and digital art."
+                        </p>
+<div class="flex items-center gap-4">
+<img alt="Student" class="w-12 h-12 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVcHioghjUhmGyNv6ezCpdybb0akru8A9fZRExb_I5a-iJPy-tVQqC1tuu76ENMqnxiHxshHcYNDkh0PjdTpd3MLec7MMJ5Vx0lzogpUfvyec6FSY6cWIMUyPObKgXfyKCkVpv05wvt9c0ani-Crzc7DfCySzcmzu49vthIsgUz0-B7D7UglvSx1somWfokXdfhP9VJtsn8hJlMN3qigB80mFxjv9v8TdXjIkwuWJSMNPlebjXK99IO8UH6q3OaDMis7I2GV2VGtA"/>
+<div>
+<h6 class="font-bold">Sarah Jenkins</h6>
+<p class="text-xs text-slate-500">Shop Owner</p>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-800 p-8 rounded-[2rem] shadow-sm border border-slate-100 dark:border-slate-700">
+<div class="flex gap-1 text-orange-400 mb-6">
+<span class="material-icons-round text-sm">star</span>
+<span class="material-icons-round text-sm">star</span>
+<span class="material-icons-round text-sm">star</span>
+<span class="material-icons-round text-sm">star</span>
+<span class="material-icons-round text-sm">star</span>
+</div>
+<p class="italic text-slate-600 dark:text-slate-300 mb-8 leading-relaxed">
+                            "The modules on TikTok ads are pure gold. My first store hit $1k in its first week. Truly grateful for this roadmap."
+                        </p>
+<div class="flex items-center gap-4">
+<img alt="Student" class="w-12 h-12 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAC6QkBHQJkmm2vNgB0rnUczg00fagGkJGNgFQgChwcM6GHfojy62_giKbjdH8aHztrAe_DmHksgK2HpnL6eOsh8lUjRMUV0rtfcxr9NPWGY7eG0c9zRQJP9QLlIdHtpbPQkg8kRs8-Yb0oWCrG2Bxze_SgZpQ8FkLSGtHrxGu2rmdsAMmaPy_jyey7pAEyPVowi6IglCryrveORcjl0UfNHilBSs0QvQwE4ZImm-kcnONOdJi5n82tdLWDl2RRTVnXXPRixmZfX1U"/>
+<div>
+<h6 class="font-bold">Marcus Chen</h6>
+<p class="text-xs text-slate-500">Digital Creator</p>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-800 p-8 rounded-[2rem] shadow-sm border border-slate-100 dark:border-slate-700">
+<div class="flex gap-1 text-orange-400 mb-6">
+<span class="material-icons-round text-sm">star</span>
+<span class="material-icons-round text-sm">star</span>
+<span class="material-icons-round text-sm">star</span>
+<span class="material-icons-round text-sm">star</span>
+<span class="material-icons-round text-sm">star</span>
+</div>
+<p class="italic text-slate-600 dark:text-slate-300 mb-8 leading-relaxed">
+                            "I've taken many courses, but this one is the most actionable. No fluff, just pure strategy that actually works in 2024."
+                        </p>
+<div class="flex items-center gap-4">
+<img alt="Student" class="w-12 h-12 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmbnl2apOnli_BW9u3Cdo1bYIydybXVnbcF-frWRd0lHIAKSv1yzql8uAWP7x4_tNzE88hSzmyzhbGrQvj5IbWlm8YQs9lcUS1Jm7SOIByQ38cUucyEbTEgHlmD-6Q1XnAi4ss2hQ65D861RP1v0lIyZkicT6O534ZVR6d6SM7WXeasYecJv9ugHsda54fqY8K8SjrA1_QgKR0dglIU3kaTzIVz6Pe_yJsrs8zSURuTEFovp2WaY8fpT7xKKj9fhbtkTFXJBQR-J8"/>
+<div>
+<h6 class="font-bold">Elena Rodriguez</h6>
+<p class="text-xs text-slate-500">Side Hustler</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="max-w-7xl mx-auto px-6 mb-12">
+<div class="bg-primary rounded-[2.5rem] p-12 text-white flex flex-col md:flex-row items-center justify-between gap-8 shadow-2xl shadow-primary/20">
+<div>
+<h3 class="text-3xl font-extrabold mb-2">Ready to get started?</h3>
+<p class="text-white/80 font-medium">Limited spots available for the next intake cohort.</p>
+</div>
+<div class="flex flex-wrap gap-4">
+<button onclick="goToRazorpay()"  class="bg-white text-primary px-8 py-3 rounded-xl font-bold hover:bg-slate-100 transition-colors">Join Now</button>
+<button class="border-2 border-white/30 text-white px-8 py-3 rounded-xl font-bold hover:bg-white/10 transition-colors">Contact Us</button>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-peach-light dark:bg-slate-950 pt-20 pb-10">
+<div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-12 mb-16">
+<div class="col-span-2 lg:col-span-2">
+<div class="flex items-center gap-2 mb-6">
+<div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center text-white">
+<span class="material-icons-round text-sm">bolt</span>
+</div>
+<span class="text-lg font-bold">DropMaster</span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 max-w-xs mb-8">
+                    Providing world-class digital education for the next generation of internet entrepreneurs.
+                </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 bg-white dark:bg-slate-800 rounded-full flex items-center justify-center shadow-sm hover:text-primary transition-colors" href="#">
+<span class="material-icons-round text-xl">facebook</span>
+</a>
+<a class="w-10 h-10 bg-white dark:bg-slate-800 rounded-full flex items-center justify-center shadow-sm hover:text-primary transition-colors" href="#">
+<span class="material-icons-round text-xl">camera_alt</span>
+</a>
+<a class="w-10 h-10 bg-white dark:bg-slate-800 rounded-full flex items-center justify-center shadow-sm hover:text-primary transition-colors" href="#">
+<span class="material-icons-round text-xl">alternate_email</span>
+</a>
+</div>
+</div>
+<div>
+<h6 class="font-bold mb-6">Company</h6>
+<ul class="space-y-4 text-slate-500 dark:text-slate-400 text-sm">
+<li><a class="hover:text-primary" href="#">About</a></li>
+<li><a class="hover:text-primary" href="#">Contact</a></li>
+<li><a class="hover:text-primary" href="#">Careers</a></li>
+<li><a class="hover:text-primary" href="#">Team</a></li>
+</ul>
+</div>
+<div>
+<h6 class="font-bold mb-6">Resources</h6>
+<ul class="space-y-4 text-slate-500 dark:text-slate-400 text-sm">
+<li><a class="hover:text-primary" href="#">Curriculum</a></li>
+<li><a class="hover:text-primary" href="#">Find a mentor</a></li>
+<li><a class="hover:text-primary" href="#">Inspiration</a></li>
+<li><a class="hover:text-primary" href="#">Pricing</a></li>
+</ul>
+</div>
+<div>
+<h6 class="font-bold mb-6">Support</h6>
+<ul class="space-y-4 text-slate-500 dark:text-slate-400 text-sm">
+<li><a class="hover:text-primary" href="#">Blog</a></li>
+<li><a class="hover:text-primary" href="#">Design borders</a></li>
+<li><a class="hover:text-primary" href="#">Affiliates</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-6 pt-10 border-t border-slate-200 dark:border-slate-800 text-center">
+<p class="text-xs text-slate-400 font-medium">All rights reserved © 2024 DropMaster Masterclass. Designed with ❤️ for entrepreneurs.</p>
+</div>
+</footer>
+
+</body></html>
